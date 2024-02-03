@@ -1,0 +1,41 @@
+@use 'colors' as c;
+
+a {
+	text-decoration: none;
+	color: c.$textColorOne;
+}
+
+h1 {
+	color: c.$textColorTwo;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.ptb {
+	padding: 4em 0;
+}
+
+hr {
+	margin: 2em 0;
+}
+
+.section__text-box {
+	margin-bottom: 6em;
+	text-align: center;
+}
+
+.section__text {
+	margin-top: 1em;
+}
+
+.colorPrimary {
+	color: c.$primary;
+}
+
+.colorWhite {
+	color: c.$white;
+}
