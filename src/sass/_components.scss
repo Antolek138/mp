@@ -19,12 +19,15 @@ h1 {
 	padding: 4em 0;
 }
 
-hr {
-	margin: 2em 0;
+.questions__line {
+	width: 100%;
+	height: 2px;
+	background-color: c.$bgColorTwo;
 }
 
 .section__text-box {
 	margin-bottom: 6em;
+	padding: 0 1em;
 	text-align: center;
 }
 
@@ -34,6 +37,10 @@ hr {
 
 .colorPrimary {
 	color: c.$primary;
+}
+
+.colorSecondary {
+	color: c.$secondary;
 }
 
 .colorWhite {
