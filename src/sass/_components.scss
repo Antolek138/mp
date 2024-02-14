@@ -29,6 +29,10 @@ h1 {
 	margin-bottom: 6em;
 	padding: 0 1em;
 	text-align: center;
+
+	&--white {
+		color: c.$blackDark;
+	}
 }
 
 .section__text {
