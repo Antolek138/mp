@@ -16,14 +16,6 @@ const showMenu = () => {
 	)
 }
 
-const containerWidth = () => {
-	const container = document.querySelector('.operation__container')
-
-	if (window.innerWidth >= 1200) {
-		console.log('działa')
-	}
-}
-
 accordionContent.forEach((item, index) => {
 	let accordionHeader = item.querySelector('.questions__accordion-header')
 	accordionHeader.addEventListener('click', () => {
@@ -50,5 +42,4 @@ const removeOpen = index1 => {
 	})
 }
 
-containerWidth()
 bars.addEventListener('click', showMenu)
