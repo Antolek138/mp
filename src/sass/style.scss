@@ -322,6 +322,61 @@ body {
 	}
 }
 
+.contact {
+	color: c.$blackDark;
+	background-color: c.$white;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 5em;
+	}
+
+	&__card,
+	&__text {
+		text-align: center;
+	}
+
+	&__card {
+		padding: 1em 0.5em;
+		width: clamp(260px, 80%, 300px);
+		border-radius: 10px;
+		color: c.$white;
+
+		&--one {
+			background-color: c.$primary;
+		}
+
+		&--two {
+			background-color: c.$secondary;
+		}
+	}
+
+	&__icon {
+		font-size: 4.8rem;
+	}
+
+	&__info {
+		margin: 1em 0 0.5em 0;
+		font-size: 2.4rem;
+	}
+
+	&__contact {
+		font-size: 1.8rem;
+	}
+
+	&__contact {
+		color: c.$white;
+	}
+
+	&__text {
+		margin: 4em 0 0 0;
+		padding: 0 1em;
+		font-size: 2.2rem;
+	}
+}
+
 //?=======
 //?MEDIA QUERIES
 //?=======
@@ -435,6 +490,25 @@ body {
 
 		&__text-bottom {
 			font-size: 2rem;
+		}
+	}
+
+	.contact {
+		&__card {
+			width: clamp(320px, 80%, 420px);
+		}
+
+		&__icon {
+			font-size: 6.8rem;
+		}
+
+		&__info,
+		&__contact {
+			font-size: 3rem;
+		}
+
+		&__text {
+			font-size: 2.6rem;
 		}
 	}
 }
@@ -602,6 +676,14 @@ body {
 
 		&__text-bottom {
 			font-size: 2.2rem;
+		}
+	}
+
+	.contact {
+		&__container {
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
 	}
 }
