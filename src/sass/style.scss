@@ -117,6 +117,14 @@ body {
 		text-align: center;
 	}
 
+	&__title {
+		color: c.$textColorTwo;
+
+		&--white {
+			color: c.$white;
+		}
+	}
+
 	&__btn {
 		display: block;
 		margin-top: 4.5em;
