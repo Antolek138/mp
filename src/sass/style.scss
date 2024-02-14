@@ -302,6 +302,17 @@ body {
 		color: c.$white;
 		background-color: c.$primary;
 	}
+
+	&__text-bottom {
+		padding: 1em 0.5em;
+		text-align: center;
+
+		mark {
+			padding: 0 0.5em;
+			color: c.$white;
+			background-color: c.$primary;
+		}
+	}
 }
 
 //?=======
@@ -413,6 +424,10 @@ body {
 
 		&__btn {
 			width: 140px;
+		}
+
+		&__text-bottom {
+			font-size: 2rem;
 		}
 	}
 }
@@ -576,6 +591,10 @@ body {
 				color: c.$primary;
 				background-color: c.$white;
 			}
+		}
+
+		&__text-bottom {
+			font-size: 2.2rem;
 		}
 	}
 }
