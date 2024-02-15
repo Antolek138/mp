@@ -42,4 +42,14 @@ const removeOpen = index1 => {
 	})
 }
 
+const footerDate = () => {
+	const footerSpan = document.querySelector('.footer__year')
+
+	const date = new Date()
+	const year = date.getFullYear()
+
+	footerSpan.textContent = year
+}
+
+footerDate()
 bars.addEventListener('click', showMenu)
