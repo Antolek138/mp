@@ -23,9 +23,12 @@ accordionContent.forEach((item, index) => {
 
 		let accordionDescription = item.querySelector('.questions__accordion-description')
 		if (item.classList.contains('open')) {
-			accordionDescription.style.height = `${accordionDescription.scrollHeight}px`
+			accordionDescription.style.height = `${accordionDescription.scrollHeight + 10}px`
+			accordionDescription.style.opacity = 1
+			accordionDescription.style.paddingTop = '.5em'
 		} else {
 			accordionDescription.style.height = `0px`
+			accordionDescription.style.opacity = 0
 		}
 		removeOpen(index)
 	})
@@ -38,6 +41,7 @@ const removeOpen = index1 => {
 
 			let des = item2.querySelector('.questions__accordion-description')
 			des.style.height = `0px`
+			des.style.opacity = 0
 		}
 	})
 }

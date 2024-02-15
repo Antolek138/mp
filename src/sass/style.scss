@@ -1,4 +1,5 @@
 @use 'colors' as c;
+@use 'mixin' as *;
 @use 'components' as *;
 
 *,
@@ -109,10 +110,7 @@ body {
 	margin-top: 60px;
 
 	&__container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
+		@include container;
 		min-height: calc(100dvh - 60px);
 		text-align: center;
 	}
@@ -140,10 +138,7 @@ body {
 
 .advantages {
 	&__container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
+		@include container;
 		gap: 80px 0;
 	}
 
@@ -166,13 +161,8 @@ body {
 }
 
 .operation {
-	color: c.$blackDark;
-	background-color: c.$white;
-
 	&__container {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
+		@include container;
 		gap: 120px 0;
 		list-style: none;
 	}
@@ -214,28 +204,28 @@ body {
 
 .questions {
 	&__accordion-container {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
+		@include container;
+		gap: 2em;
 		padding: 0.5em 1em;
 		max-width: 580px;
 		text-align: center;
 	}
 
 	&__accordion-content {
+		padding: 0.5em;
 		overflow: hidden;
 	}
 
 	&__accordion-header {
-		padding-bottom: 1em;
 		font-size: 1.8rem;
 	}
 
 	&__accordion-description {
 		display: block;
 		height: 0;
+		opacity: 0;
 		color: c.$textColorTwo;
-		transition: height 0.3s linear;
+		transition: height 0.3s linear, opacity 0.2s linear;
 	}
 
 	&__text {
@@ -247,9 +237,6 @@ body {
 }
 
 .note {
-	color: c.$blackDark;
-	background-color: c.$white;
-
 	&__text {
 		padding: 0 1em;
 		font-size: 2.8rem;
@@ -259,10 +246,9 @@ body {
 
 .offers {
 	&__container {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		gap: 4em;
+		@include container;
+		gap: 8em;
+		margin-top: 8em;
 	}
 
 	&__card {
@@ -278,10 +264,10 @@ body {
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		top: -1.2em;
-		width: 50px;
-		height: 50px;
-		font-size: 2.2rem;
+		top: -1em;
+		width: 55px;
+		height: 55px;
+		font-size: 2.8rem;
 		font-weight: bold;
 		border-radius: 5px;
 		background-color: c.$primary;
@@ -289,11 +275,12 @@ body {
 
 	&__title {
 		padding: 0.5em 0;
-		font-size: 2rem;
+		font-size: 2.2rem;
 	}
 
 	&__text,
 	&__btn {
+		font-size: 1.8rem;
 		font-weight: 600;
 	}
 
@@ -323,20 +310,15 @@ body {
 }
 
 .contact {
-	color: c.$blackDark;
-	background-color: c.$white;
-
 	&__container {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
+		@include container;
 		gap: 4em;
 	}
 
 	&__mail,
 	&__phone,
 	&__text {
-		font-size: 2.2rem;
+		font-size: 2.4rem;
 	}
 
 	&__mail,
@@ -438,9 +420,7 @@ body {
 
 	.questions {
 		&__container {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
+			@include container;
 		}
 
 		&__accordion-content {
@@ -461,7 +441,6 @@ body {
 	.offers {
 		&__container {
 			align-items: stretch;
-			justify-content: center;
 			flex-direction: row;
 			flex-wrap: wrap;
 		}
@@ -594,7 +573,6 @@ body {
 		gap: 50px;
 
 		&__container {
-			justify-content: center;
 			flex-direction: row;
 			flex-wrap: wrap;
 			gap: 120px;

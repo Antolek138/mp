@@ -15,6 +15,11 @@ a {
 	padding: 4em 0;
 }
 
+.bg-color-light {
+	color: c.$blackDark;
+	background-color: c.$white;
+}
+
 .questions__line {
 	width: 100%;
 	height: 2px;
@@ -31,6 +36,10 @@ a {
 	}
 }
 
+.section__title {
+	font-size: 2.6rem;
+}
+
 .section__text {
 	margin-top: 1em;
 }
@@ -43,3 +52,17 @@ a {
 	color: c.$secondary;
 }
 
+.bg-secondary {
+	background-color: c.$secondary;
+	border-radius: 5px;
+
+	.questions__accordion-description {
+		color: #c3c3c3;
+	}
+}
+
+@media (min-width: 992px) {
+	.section__title {
+		font-size: 3.2rem;
+	}
+}
