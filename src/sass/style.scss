@@ -359,60 +359,6 @@ body {
 	text-align: center;
 }
 
-.packages {
-	margin-top: 120px;
-
-	&__container {
-		margin-bottom: 2em;
-		@include container;
-		gap: 8em;
-	}
-
-	&__card {
-		position: relative;
-		padding: 1em;
-		width: clamp(300px, 80%, 350px);
-		border-radius: 10px;
-		background-color: c.$blackCard;
-
-		&--last {
-			background-color: c.$secondary;
-		}
-	}
-
-	&__number {
-		position: absolute;
-		top: -1.5em;
-		left: 1em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		width: 60px;
-		height: 60px;
-		font-size: 2.8rem;
-		font-weight: bold;
-		border-radius: 5px;
-		background-color: c.$primary;
-	}
-
-	&__title {
-		margin: 1em 0;
-	}
-
-	&__text {
-		color: c.$textColorTwo;
-	}
-
-	&__list {
-		list-style: none;
-	}
-
-	&__item:not(:last-child) {
-		margin-bottom: 1em;
-	}
-}
-
 //?=======
 //?MEDIA QUERIES
 //?=======
@@ -535,23 +481,6 @@ body {
 		&__phone,
 		&__text {
 			font-size: 2.6rem;
-		}
-	}
-
-	.packages {
-		&__container {
-			align-items: stretch;
-			flex-direction: row;
-			flex-wrap: wrap;
-			gap: 4em;
-		}
-
-		&__card {
-			width: 40%;
-
-			&--last {
-				height: 250px;
-			}
 		}
 	}
 }
