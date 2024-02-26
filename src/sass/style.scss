@@ -359,50 +359,6 @@ body {
 	text-align: center;
 }
 
-//?======
-//?PORTFOLIO PAGE
-//?======
-
-.portfolio {
-	margin-top: 60px;
-	min-height: calc(100dvh - 60px);
-
-	&__container {
-		@include container;
-	}
-
-	&__loader {
-		width: 20px;
-		aspect-ratio: 1;
-		background: c.$primary;
-		box-shadow: 0 0 60px 15px c.$primary;
-		transform: translate(-80px);
-		clip-path: inset(0);
-		animation: l4-1 0.5s ease-in-out infinite alternate, l4-2 1s ease-in-out infinite;
-	}
-	@keyframes l4-1 {
-		100% {
-			transform: translateX(80px);
-		}
-	}
-	@keyframes l4-2 {
-		33% {
-			clip-path: inset(0 0 0 -100px);
-		}
-		50% {
-			clip-path: inset(0 0 0 0);
-		}
-		83% {
-			clip-path: inset(0 -100px 0 0);
-		}
-	}
-
-	&__text {
-		margin-top: 50%;
-		font-size: 2.2rem;
-	}
-}
-
 .packages {
 	margin-top: 120px;
 
@@ -579,12 +535,6 @@ body {
 		&__phone,
 		&__text {
 			font-size: 2.6rem;
-		}
-	}
-
-	.portfolio {
-		&__text {
-			margin-top: 25%;
 		}
 	}
 
