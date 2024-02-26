@@ -1,3 +1,5 @@
+const body = document.querySelector('body')
+const logo = document.querySelector('.nav__logo')
 const menu = document.querySelector('.nav__menu')
 const bars = document.querySelector('.nav__bars')
 const allNavItems = document.querySelectorAll('.nav__menu-link')
@@ -55,5 +57,25 @@ const footerDate = () => {
 	footerSpan.textContent = year
 }
 
+const lockedBody = () => {
+	if (body.classList.contains('unlocked')) {
+		body.classList.remove('unlocked')
+		body.classList.add('locked')
+	} else {
+		body.classList.remove('locked')
+		body.classList.add('unlocked')
+	}
+}
+
+const closeLogo = () => {
+	body.classList.remove('locked')
+	body.classList.add('unlocked')
+	menu.classList.remove('nav__menu--active')
+	bars.classList.remove('nav__bars--active')
+}
+
 footerDate()
-bars.addEventListener('click', showMenu)
+logo.addEventListener('click', closeLogo)
+bars.addEventListener('click', () => {
+	showMenu(), lockedBody()
+})
