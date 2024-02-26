@@ -293,8 +293,10 @@ body {
 	}
 
 	&__btn {
+		display: block;
 		margin-top: 2em;
 		padding: 0.5em 1em;
+		max-width: 170px;
 		border-radius: 5px;
 		border: none;
 		color: c.$white;
@@ -564,7 +566,7 @@ body {
 		}
 
 		&__btn {
-			width: 140px;
+			max-width: 180px;
 		}
 
 		&__text-bottom {
@@ -597,7 +599,7 @@ body {
 		&__card {
 			width: 40%;
 
-			&--last{
+			&--last {
 				height: 250px;
 			}
 		}
