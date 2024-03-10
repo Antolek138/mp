@@ -110,6 +110,7 @@ body {
 
 	&__container {
 		@include container;
+		gap: 5em;
 		min-height: calc(100dvh - 60px);
 		text-align: center;
 	}
@@ -126,7 +127,6 @@ body {
 	&__btns {
 		display: flex;
 		gap: 2.5em;
-		margin-top: 4.5em;
 	}
 
 	&__btn {
@@ -412,7 +412,6 @@ body {
 
 		&__btns {
 			gap: 5em;
-			margin-top: 6em;
 		}
 
 		&__btn {
