@@ -19,11 +19,6 @@ section {
 	scroll-margin-top: 60px;
 }
 
-button,
-body {
-	font-family: 'Poppins', sans-serif;
-}
-
 body {
 	font-size: 1.6rem;
 	color: c.$textColorOne;
@@ -120,6 +115,7 @@ body {
 	}
 
 	&__title {
+		font-size: 3.2rem;
 		color: c.$textColorTwo;
 
 		&--white {
@@ -127,10 +123,16 @@ body {
 		}
 	}
 
+	&__btns {
+		display: flex;
+		gap: 2.5em;
+		margin-top: 4.5em;
+	}
+
 	&__btn {
 		display: block;
-		margin-top: 4.5em;
 		padding: 0.5em 1em;
+		width: 125px;
 		font-size: 1.8rem;
 		font-weight: 600;
 		border: none;
@@ -408,8 +410,13 @@ body {
 			font-size: 4.2rem;
 		}
 
-		&__btn {
+		&__btns {
+			gap: 5em;
 			margin-top: 6em;
+		}
+
+		&__btn {
+			width: 180px;
 			font-size: 2rem;
 		}
 	}

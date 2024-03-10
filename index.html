@@ -9,12 +9,29 @@
     <title>AntolCoding - Profesjonalne tworzenie stron internetowych</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./dist/css/style.min.css">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    </noscript>
+    <link rel="preload" href="./dist/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./dist/css/style.min.css">
+    </noscript>
 </head>
 
 <body class="unlocked">
+    <style>
+        button,
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 
     <nav class="nav">
     <div class="wrapper">
@@ -38,13 +55,17 @@
     <header class="header">
         <div class="wrapper">
             <div class="header__container">
-                <h1 class="header__title">
-                    Kreujemy <span class="header__title--white">Wizytówki</span> Online
-                    <br><br>
-                    <span class="header__title--white">Profesjonalne</span> Strony WWW Dla
-                    <span class="header__title--white">Twojego</span> Biznesu
-                </h1>
-                <a href="#contact" class="header__btn">Kontakt</a>
+                <h1 class="header__title">Kreujemy <span class="header__title--white">Wizytówki</span> Online</h1>
+                <br><br>
+                <h2 class="header__title">
+                    <span class="header__title--white">Profesjonalne</span>
+                    Strony WWW Dla <span class="header__title--white">Twojego</span> Biznesu
+                </h2>
+                <div class="header__btns">
+                    <a href="#contact" class="header__btn">Kontakt</a>
+                    <a href="https://www.facebook.com/people/AntolCoding/100095601850642/" class="header__btn"
+                        target="_blank" rel="noopener">Facebook</a>
+                </div>
             </div>
         </div>
     </header>
@@ -187,7 +208,8 @@
             </div>
         </section>
         <section class="note ptb bg-color-light">
-            <p class="note__text">Nie tworzymy sklepów oraz blogów</p>
+            <p class="note__text">Nie tworzymy <span class="colorPrimary">sklepów</span> oraz <span
+                    class="colorPrimary">blogów</span></p>
         </section>
         <section class="offers ptb" id="offers">
             <div class="section__text-box">
