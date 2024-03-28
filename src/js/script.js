@@ -1,10 +1,19 @@
 const body = document.querySelector('body')
+const nav = document.querySelector('.nav')
 const logo = document.querySelector('.nav__logo')
 const menu = document.querySelector('.nav__menu')
 const bars = document.querySelector('.nav__bars')
 const allNavItems = document.querySelectorAll('.nav__menu-link')
 const accordionContent = document.querySelectorAll('.questions__accordion-content')
 const offersContent = document.querySelectorAll('.offers__card')
+
+const handleNav = () => {
+	if (window.scrollY >= 20) {
+		nav.classList.add('nav--active')
+	} else {
+		nav.classList.remove('nav--active')
+	}
+}
 
 const showMenu = () => {
 	menu.classList.toggle('nav__menu--active')
@@ -75,6 +84,7 @@ const closeLogo = () => {
 }
 
 footerDate()
+window.addEventListener('scroll', handleNav)
 logo.addEventListener('click', closeLogo)
 bars.addEventListener('click', () => {
 	showMenu(), lockedBody()

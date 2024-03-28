@@ -35,8 +35,12 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: c.$bgColorOne;
 	z-index: 100;
+	transition: background-color 0.3s;
+
+	&--active {
+		background-color: c.$bgColorOne;
+	}
 
 	&__container {
 		position: relative;
@@ -48,20 +52,23 @@ body {
 	}
 
 	&__logo {
+		position: relative;
 		font-size: 2.8rem;
 		font-weight: 600;
+		z-index: 100;
 	}
 
 	&__menu {
 		position: absolute;
-		top: 60px;
+		padding-top: 60px;
+		top: 0;
 		left: 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
 		flex-direction: column;
 		width: 100%;
-		height: calc(100dvh - 60px);
+		height: 100dvh;
 		translate: 120% 0;
 		transition: translate 0.3s;
 		background-color: c.$bgColorOne;
@@ -83,6 +90,7 @@ body {
 		height: 40px;
 		border: none;
 		background: none;
+		z-index: 100;
 
 		&--active {
 			.nav__bars-line:nth-child(1) {
@@ -111,13 +119,17 @@ body {
 }
 
 .header {
-	margin-top: 60px;
+	position: relative;
+	padding-top: 60px;
+	overflow: hidden;
 
 	&__container {
+		position: relative;
 		@include container;
 		gap: 5em;
 		min-height: calc(100dvh - 60px);
 		text-align: center;
+		z-index: 5;
 	}
 
 	&__title {
@@ -144,6 +156,38 @@ body {
 		border-radius: 5px;
 		color: c.$white;
 		background-color: c.$secondary;
+	}
+
+	&__circle {
+		position: absolute;
+		border-radius: 50%;
+
+		&--one {
+			top: -5%;
+			left: -10%;
+			width: 220px;
+			height: 220px;
+			background-color: c.$secondary;
+		}
+
+		&--two {
+			bottom: -20%;
+			right: -15%;
+			width: 280px;
+			height: 280px;
+			background-color: c.$primary;
+		}
+	}
+
+	&__blur {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(25px) saturate(180%);
+		-webkit-backdrop-filter: blur(25px) saturate(180%);
+		background-color: c.$hero;
+		z-index: 1;
 	}
 }
 
@@ -313,6 +357,7 @@ body {
 
 	&__text-bottom {
 		padding: 1em 0.5em;
+		font-size: 2rem;
 		text-align: center;
 
 		mark {
@@ -398,8 +443,10 @@ body {
 			justify-content: flex-end;
 			flex-direction: row;
 			gap: 0;
+			padding-top: 0;
 			height: 100%;
 			translate: 0;
+			background: none;
 		}
 
 		&__menu-link {
@@ -423,6 +470,20 @@ body {
 		&__btn {
 			width: 180px;
 			font-size: 2rem;
+		}
+
+		&__circle {
+			&--one {
+				width: 340px;
+				height: 340px;
+			}
+
+			&--two {
+				bottom: -15%;
+				right: -15%;
+				width: 420px;
+				height: 420px;
+			}
 		}
 	}
 
@@ -675,6 +736,22 @@ body {
 	.operation {
 		&__container {
 			max-width: 1000px;
+		}
+	}
+}
+
+@media (min-width: 1500px) {
+	.header {
+		&__circle {
+			&--one {
+				width: 380px;
+				height: 380px;
+			}
+
+			&--two {
+				width: 520px;
+				height: 520px;
+			}
 		}
 	}
 }
